@@ -9,16 +9,37 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters >
+                        <Setter Target="mainPanel.Orientation" Value="Horizontal"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="200"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters >
+                        <Setter Target="mainPanel.Orientation" Value="Vertical"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <StackPanel Orientation="Horizontal" 
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Center">
+                    HorizontalAlignment="Center"
+                    x:Name="mainPanel">
             <Ellipse Width="100" Height="100">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/Assets/log.jpg" Stretch="UniformToFill"/>
                 </Ellipse.Fill>
             </Ellipse>
             <TextBox x:Name="namebox" Margin="10" Padding="10" BorderBrush="LightGray" PlaceholderText="UserName" FontSize="38" Width="300"/>
-            <Button Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=namebox,Path=Text}">
+            <Button Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=namebox,Path=Text}" HorizontalAlignment="Center">
                 <Button.Template>
                     <ControlTemplate>
                         <Path Stroke="LightBlue" StrokeThickness="2" Fill="Transparent">
