@@ -8,6 +8,31 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Background="Brown" Padding="20">
+            <RadioButton GroupName="mainFeatures" MinWidth="10" Margin="0,40"> 
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10">
+                            <Image Stretch="UniformToFill" Source="/Assets/log.jpg"/>
+                        </Border>
+                    </ControlTemplate>
+                </RadioButton.Template>               
+            </RadioButton>
+            <RadioButton Background="Green" MinWidth="10" GroupName="mainFeatures">
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <Ellipse Fill="{TemplateBinding Background}" 
+                                 Stroke="Green"
+                                 Stretch="UniformToFill"
+                                 StrokeThickness="2"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+        </StackPanel>
     </Grid>
 </Page>
