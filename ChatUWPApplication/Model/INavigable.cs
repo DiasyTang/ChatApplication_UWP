@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace ChatUWPApplication.Model
 {
-    public interface INavigable
+    public interface INavigable:IViewModel
     {
-        void OnNavigatedFrom(object obj);
-
-        void OnNavigatedTo(object obj);
-
+        
     }
 }
