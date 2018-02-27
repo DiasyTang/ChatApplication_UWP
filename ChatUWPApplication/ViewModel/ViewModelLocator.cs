@@ -1,4 +1,5 @@
-﻿using ChatUWPApplication.View;
+﻿using ChatUWPApplication.Model;
+using ChatUWPApplication.View;
 using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
@@ -18,12 +19,24 @@ namespace ChatUWPApplication.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<LoginViewModel>();
+            SimpleIoc.Default.Register<MessageViewModel>();
+            SimpleIoc.Default.Register<SettingViewModel>();
 
-            var navigationService = this.CreateNavigationService();
-            SimpleIoc.Default.Register<INavigationService>(() => navigationService);
+
+            SimpleIoc.Default.Register(()=> this.CreateSubNavigationService());
+            SimpleIoc.Default.Register(() => this.CreateNavigationService());
         }
 
-        private INavigationService CreateNavigationService()
+        private SubNavigationService CreateSubNavigationService()
+        {
+            var subnavigationService = new SubNavigationService();
+            subnavigationService.Configure("Message", typeof(MessageView));
+            subnavigationService.Configure("Setting", typeof(SettingView));
+
+            return subnavigationService;
+        }
+
+        private NavigationService CreateNavigationService()
         {
             var navigationService = new NavigationService();
             navigationService.Configure("MainPage", typeof(MainView));
@@ -31,9 +44,11 @@ namespace ChatUWPApplication.ViewModel
 
             return navigationService;
         }
-
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
 
         public LoginViewModel Login => ServiceLocator.Current.GetInstance<LoginViewModel>();
+        public MessageViewModel Message => ServiceLocator.Current.GetInstance<MessageViewModel>();
+
+        public SettingViewModel Setting => ServiceLocator.Current.GetInstance<SettingViewModel>();
     }
 }

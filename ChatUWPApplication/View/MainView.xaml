@@ -14,7 +14,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical" Background="Brown" Padding="20">
             <RadioButton GroupName="mainFeatures" Command="{Binding GoToSettingsPageCommand}" MinWidth="10" Margin="0,40"> 
@@ -26,7 +25,7 @@
                     </ControlTemplate>
                 </RadioButton.Template>               
             </RadioButton>
-            <RadioButton x:Name="mrbtn" Command="{Binding GoToMessagePageCommand}" IsChecked="True" MinWidth="10" GroupName="mainFeatures">
+            <RadioButton x:Name="mrbtn" IsChecked="True" MinWidth="10" GroupName="mainFeatures">
                 <RadioButton.Template>
                     <ControlTemplate>
                         <Ellipse Fill="{TemplateBinding Background}" 
@@ -40,12 +39,12 @@
                         <c:ChangePropertyAction TargetObject="{Binding ElementName=mrbtn}" PropertyName="Background" Value="White"/>
                     </c:DataTriggerBehavior>
                     <c:DataTriggerBehavior Binding="{Binding IsChecked,ElementName=mrbtn}" Value="True">
+                        <c:InvokeCommandAction Command="{Binding GoToMessagePageCommand}"/>
                         <c:ChangePropertyAction TargetObject="{Binding ElementName=mrbtn}" PropertyName="Background" Value="Green"/>
                     </c:DataTriggerBehavior>
                 </i:Interaction.Behaviors>
             </RadioButton>         
         </StackPanel>
-        <Frame x:Name="messageframe" Grid.Column="1"/>
-        <Frame x:Name="detailframe"  Grid.Column="2"/>
+        <Frame x:Name="mainframe" Grid.Column="1"/>
     </Grid>
 </Page>

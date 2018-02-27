@@ -25,6 +25,6 @@ namespace ChatUWPApplication.View
         public MessageView()
         {
             this.InitializeComponent();
-        }
+        }        
     }
 }

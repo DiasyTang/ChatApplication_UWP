@@ -23,8 +23,8 @@ namespace ChatUWPApplication.ViewModel
 
         private void LoginCommand_Execute(string name)
         {
-            var navigationService = ServiceLocator.Current.GetInstance<INavigationService>();
-            navigationService.NavigateTo("MainPage");
+            var navigationService = ServiceLocator.Current.GetInstance<NavigationService>();
+            navigationService.NavigateTo("MainPage",name);
         }
         
     }
