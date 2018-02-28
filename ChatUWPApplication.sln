@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatUWPApplication", "ChatUWPApplication\ChatUWPApplication.csproj", "{DDF5B6E3-8365-45AD-86C9-3B5E73C0950B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServerApplication", "..\ChatServerApplication\ChatServerApplication.csproj", "{F7FFDFE6-3327-4982-A682-C75275F5B87F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketBusiness", "..\SocketBusiness\SocketBusiness.csproj", "{E1EFBC19-479A-445E-A9B4-A02E309DD676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,42 +37,6 @@ Global
 		{DDF5B6E3-8365-45AD-86C9-3B5E73C0950B}.Release|x86.ActiveCfg = Release|x86
 		{DDF5B6E3-8365-45AD-86C9-3B5E73C0950B}.Release|x86.Build.0 = Release|x86
 		{DDF5B6E3-8365-45AD-86C9-3B5E73C0950B}.Release|x86.Deploy.0 = Release|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|ARM.ActiveCfg = Debug|ARM
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|ARM.Build.0 = Debug|ARM
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|ARM.Deploy.0 = Debug|ARM
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|x64.ActiveCfg = Debug|x64
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|x64.Build.0 = Debug|x64
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|x64.Deploy.0 = Debug|x64
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|x86.ActiveCfg = Debug|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|x86.Build.0 = Debug|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Debug|x86.Deploy.0 = Debug|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|Any CPU.ActiveCfg = Release|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|ARM.ActiveCfg = Release|ARM
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|ARM.Build.0 = Release|ARM
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|ARM.Deploy.0 = Release|ARM
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|x64.ActiveCfg = Release|x64
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|x64.Build.0 = Release|x64
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|x64.Deploy.0 = Release|x64
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|x86.ActiveCfg = Release|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|x86.Build.0 = Release|x86
-		{F7FFDFE6-3327-4982-A682-C75275F5B87F}.Release|x86.Deploy.0 = Release|x86
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|ARM.ActiveCfg = Debug|ARM
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|ARM.Build.0 = Debug|ARM
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|x64.ActiveCfg = Debug|x64
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|x64.Build.0 = Debug|x64
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|x86.ActiveCfg = Debug|x86
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Debug|x86.Build.0 = Debug|x86
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|ARM.ActiveCfg = Release|ARM
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|ARM.Build.0 = Release|ARM
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|x64.ActiveCfg = Release|x64
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|x64.Build.0 = Release|x64
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|x86.ActiveCfg = Release|x86
-		{E1EFBC19-479A-445E-A9B4-A02E309DD676}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
