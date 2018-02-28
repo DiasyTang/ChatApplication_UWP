@@ -31,7 +31,7 @@ namespace ChatUWPApplication.Controls
                 var box = sender as RichEditBox;
                 box.Document.GetText(Windows.UI.Text.TextGetOptions.UseObjectText, out text);
                 SendMessageCommand?.Execute(text);
-                box.Document.SetText(Windows.UI.Text.TextSetOptions.None, null);
+                box.Document.SetText(Windows.UI.Text.TextSetOptions.None, String.Empty);
             }
         }
     }
